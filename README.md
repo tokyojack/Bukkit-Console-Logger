@@ -7,8 +7,8 @@ INSTRUCTIONS:
 
 TO USE:
 1. ```Console.INFO.log("Something has turned on.");```
-1. ```Console.SUCCESS.log("Something has worked successfully!");```
-1. ```Console.ERROR.log("Something Failed to do something! Panic!!! (╯°□°）╯︵ ┻━┻");```
+2. ```Console.SUCCESS.log("Something has worked successfully!");```
+3. ```Console.ERROR.log("Something Failed to do something! Panic!!! (╯°□°）╯︵ ┻━┻");```
 
 Now you've just install the program! You're a pretty cool person:
 1. ```(•_•)```
