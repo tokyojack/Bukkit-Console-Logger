@@ -11,7 +11,7 @@ public class Test {
 		}
 
 		player.sendMessage("You're a nice person :).");
-		Console.SUCCESS.log("Successfully messaged a person!");
+		Console.SUCCESS.log("Successfully messaged ", playerName, "!");
 	}
 
 }
