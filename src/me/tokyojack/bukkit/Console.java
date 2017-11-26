@@ -10,38 +10,23 @@ public enum Console {
 	SUCCESS(ChatColor.GREEN + "[SUCCESS]"),
 	INFO(ChatColor.WHITE + "[INFO]");
 
-	private final String LOG_PREFIX = ChatColor.GOLD + "[COOL PLUGIN NAME]";
+	// Could get the JavaPlugin instance and then get the plugin name off the
+	// config you want.
+	private final String PLUGIN_NAME = ChatColor.GOLD + "[PLUGIN NAME]";
 	private String prefix;
 
 	private Console(String prefix) {
 		this.prefix = prefix;
 	}
 
-	public void log(String message) {
-		logToConsole(LOG_PREFIX + " " + this.prefix + ": " + ChatColor.translateAlternateColorCodes('&', message));
+	public void log(Object... values) {
+		Bukkit.getServer().getConsoleSender()
+				.sendMessage(PLUGIN_NAME + " " + this.prefix + ": " + mergeAllValuesIntoString(values));
 	}
 
-	public void log(int number) {
-		logToConsole(LOG_PREFIX + " " + this.prefix + ": " + number);
-	}
-
-	public void log(float number) {
-		logToConsole(LOG_PREFIX + " " + this.prefix + ": " + number);
-	}
-
-	public void log(double number) {
-		logToConsole(LOG_PREFIX + " " + this.prefix + ": " + number);
-	}
-
-	public void log(boolean bool) {
-		logToConsole(LOG_PREFIX + " " + this.prefix + ": " + bool);
-	}
-
-	public void log(List<String> list) {
-		list.forEach(item -> logToConsole(LOG_PREFIX + " " + this.prefix + ": " + item));
-	}
-
-	private void logToConsole(String message) {
-		Bukkit.getServer().getConsoleSender().sendMessage(message);
+	private String mergeAllValuesIntoString(Object[] objects) {
+		StringBuilder stringBuilder = new StringBuilder();
+		Arrays.asList(objects).stream().forEach(value -> stringBuilder.append(value.toString() + " "));
+		return stringBuilder.toString();
 	}
 }
