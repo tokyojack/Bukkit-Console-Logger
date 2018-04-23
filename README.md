@@ -12,7 +12,9 @@
 ## Usage
 
 ```Console.INFO.log("Something has turned on.");```
+<br/>
 ```Console.SUCCESS.log("Something has worked successfully!");```
+<br/>
 ```Console.ERROR.log("Something Failed to do something! Panic!!! (╯°□°）╯︵ ┻━┻");```
 
 ##
