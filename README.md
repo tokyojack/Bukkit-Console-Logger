@@ -1,5 +1,5 @@
 <h2  align="center">Bukkit-Console-Logger</h2>
-<p  align="center">A simple console utility class made with Bukkit.</p>
+<p  align="center">A simple console utility made with Bukkit.</p>
 
 <br/>
 
